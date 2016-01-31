@@ -3,5 +3,5 @@
 #include <iostream>
 
 int main() {
-	FileReader("English_words.txt");
+	FileReader("englishwords.txt");
 }
