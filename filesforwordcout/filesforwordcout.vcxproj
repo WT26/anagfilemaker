@@ -27,6 +27,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="englishwords.txt" />
+    <Text Include="femalenames.txt" />
+    <Text Include="malenames.txt" />
+    <Text Include="Text.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{13C9F6E1-18C5-489D-9193-CB5FB8498D59}</ProjectGuid>

@@ -3,5 +3,7 @@
 #include <iostream>
 
 int main() {
-	FileReader("englishwords.txt");
+	//FileReader("englishwords.txt");
+	//lowercase("femalenames.txt");
+	delete_numbers("allnewwords.txt");
 }

@@ -4,6 +4,7 @@
 #include <map>
 #include <vector>
 #include <algorithm>
+#include <string> 
 
 using namespace std;
 
@@ -166,4 +167,46 @@ void FileReader(string name_of_the_file) {
 
 	cout << "Press enter to exit\n";
 	getline(cin, line);
+}
+
+void lowercase(string name_of_the_file) {
+
+	ifstream the_file(name_of_the_file);
+	string line;
+	vector<string> newfile;
+
+
+	while (!the_file.eof()) {
+		the_file >> line;
+		transform(line.begin(), line.end(), line.begin(), ::tolower);
+		newfile.push_back(line);
+	}
+	ofstream file("allnewwords.txt");
+	for (auto lin : newfile) {
+		file << lin << "\n";
+	}
+}
+
+void delete_numbers(string name_of_the_file) {
+	ifstream the_file(name_of_the_file);
+	string line;
+	vector<string> newfile;
+
+
+	while (!the_file.eof()) {
+		the_file >> line;
+		
+		if ((line.at(0) == '1' || line.at(0) == '2' || line.at(0) == '3' || line.at(0) == '4'
+			|| line.at(0) == '0' || line.at(0) == '7' || line.at(0) == '6' || line.at(0) == '5'
+			|| line.at(0) == '9' || line.at(0) == '8')) {
+			cout << line.at(0) << "\n";
+		}
+		else {
+			newfile.push_back(line);
+		}
+	}
+	ofstream file("allnewwords6.txt");
+	for (auto lin : newfile) {
+		file << lin << "\n";
+	}
 }
