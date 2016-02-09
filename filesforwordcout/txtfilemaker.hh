@@ -10,4 +10,6 @@ using namespace std;
 void FileReader(string name_of_the_file);
 void lowercase(string name_of_the_file);
 void delete_numbers(string name_of_the_file);
+void words_twice(string name_of_the_file);
+
 #endif // FILEREADER_HH

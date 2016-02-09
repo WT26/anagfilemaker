@@ -155,7 +155,7 @@ void FileReader(string name_of_the_file) {
 	int number{1};
 	for (auto vec : all_words) {
 		string save_file_name{ "words_" };
-		save_file_name += to_string(number) + ".txt";
+		save_file_name += to_string(number) + "name.txt";
 		ofstream a_file(save_file_name);
 
 		for (auto str : vec) {
@@ -206,6 +206,31 @@ void delete_numbers(string name_of_the_file) {
 		}
 	}
 	ofstream file("allnewwords6.txt");
+	for (auto lin : newfile) {
+		file << lin << "\n";
+	}
+}
+
+void words_twice(string name_of_the_file) {
+	ifstream the_file(name_of_the_file);
+	string line;
+	vector<string> newfile;
+
+	int i{0};
+	while (!the_file.eof()) {
+		the_file >> line;
+		if (find(newfile.begin(), newfile.end(), line) != newfile.end()) {
+		}
+		else {
+			newfile.push_back(line);
+		}
+		if (i > 1000) {
+			cout << line << endl;
+			i = 0;
+		}
+		i++;
+	}
+	ofstream file("allnewwords7.txt");
 	for (auto lin : newfile) {
 		file << lin << "\n";
 	}

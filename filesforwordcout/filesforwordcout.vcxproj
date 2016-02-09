@@ -27,6 +27,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="englishwords.txt" />
+    <Text Include="englishwords_names.txt" />
     <Text Include="femalenames.txt" />
     <Text Include="malenames.txt" />
     <Text Include="Text.txt" />
